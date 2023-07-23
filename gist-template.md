@@ -53,11 +53,14 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - In a more complex example (kyx)@(123). Possible examples of what would match are: "kyx@123", "yx@23", "x:3". 
 - However, "123"kyx" would now be a match. 
 
-### Character Classes
+<!-- ### Character Classes
+- Not used in code -->
 
-### Flags
+<!-- ### Flags
+- not used in code -->
 
-### Grouping and Capturing
+<!-- ### Grouping and Capturing
+- not used in code -->
 
 ### Bracket Expressions
 - Anything with [] means there are chararacters are the ones we want to include and match up. 
@@ -78,5 +81,6 @@ The regex I will be describing is matching an encrypted email to a standard one.
 ### Look-ahead and Look-behind
 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+- About the Author: I am a new front/back- end developer studyign at the University of Toronto.
+- GitHub Profile: https://github.com/Sagenthave 
+<!-- A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile) -->
