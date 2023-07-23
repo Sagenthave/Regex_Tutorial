@@ -28,21 +28,27 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - You can see below that the example email expression is wrapped in slashes. 
 ## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
-
-
 ### Anchors
-- Anchors are not meant to be viewed as charactars. Instead you can view them as signals that place characters before, after, or inbetween. Please not that not all the possible anchors will be viewed in this tutorial. For a full list please search the Web. 
-- Anchors in the example are the the following: 
-- ^ $
+- Anchors are not meant to be viewed as charactars. Instead you can view them as signals that place characters before, after, or inbetween. 
+- Anchors in the example are the following: ^ $
+- Please not that not all the possible anchors will be viewed in this tutorial. For a full list please search the Web. 
 - ^ signals that the following character is that start of the character string for the expression. 
 - $ signals that the string expression has come to a end with the character listed before it. 
 ## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 - In the example provided we can see the expression is wrapped in slashes. Starts after ^ and ends with the symbol before $. So we will be looking at ([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6}) for our hidden email.
 
-
 ### Quantifiers
+- Quantifiers are similar to anchors and are not meant to be viewed as characters. Instead you can view than as signals that show you how often a sequence can be repeated.
+- Quantifiers in the example are the following: + 
+- Please not that not all the possible quantifiers will be viewed in this tutorial. For a full list please search the Web. 
+- The + quantifier looks inside the ([ ]) for the set of characters it is addressing and matched the pattern one or more times. 
+## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+- In our example we can see in the plus symbols in two places. ([a-z0-9_\.-]+ and )@([\da-z\.-]+)
+- a-z0-9_\.- and \da-z\.- can be repeated one or more times in the sequence.  
+- This means these two sections can be repeated. For the sake of simplicity I will only multiply it once to generate an email with the encrypted expression. 
 
 ### OR Operator
+- 
 
 ### Character Classes
 
@@ -51,6 +57,14 @@ The regex I will be describing is matching an encrypted email to a standard one.
 ### Grouping and Capturing
 
 ### Bracket Expressions
+- Anything with [] means there are chararacters are the ones we want to include and match up. 
+## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+- As you have probably noticed, there is a hypen between the letters and numbers. a-z and 0-9. This means that the expression can have any letters between a to z and any number from 0 to 9. Furthermore the _- in the expression within the bracket indicates the email can contain a hypen or an underscore.
+- The following examples below are possible examples that can be generated from the example section: [a-z0-9_\.-]
+- protect_nature-123
+- books-are-the-best_12345
+- 1234-12378
+- _-_-_-_-
 
 ### Greedy and Lazy Match
 
