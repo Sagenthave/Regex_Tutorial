@@ -14,9 +14,9 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
+<!-- - [Character Classes](#character-classes)
 - [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
+- [Grouping and Capturing](#grouping-and-capturing) -->
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
@@ -50,8 +50,8 @@ The regex I will be describing is matching an encrypted email to a standard one.
 ### OR Operator
 - The OR Opterator (|) takes into consideration that within the bracket expression, it is not necassary for all the requiraments to been met. 
 - For example: 123 can be written as 1|2|3
-- In a more complex example (kyx)@(123). Possible examples of what would match are: "kyx@123", "yx@23", "x:3". 
-- However, "123"kyx" would now be a match. 
+- In a more complex example (kyx)@(123). Possible examples of what would match are: "kyx@123", "yx@23", "x@3". 
+- However, "123@kyx" would NOT be a match. 
 
 <!-- ### Character Classes
 - Not used in code -->
@@ -73,8 +73,27 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - _-_-_-_-
 
 ### Greedy and Lazy Match
+- Greedy matches are: (*), (+), (?), and {}. 
+- The symbols listed above are considered to be greedy because they want to match with as many character possibilites as possible. 
+- The pattern is matched with each symbol:
+- (*) zero or more times used
+- (+) one or more times
+- (?) zero or one time
+- {} the curly brackets are what we can see in the example provided. 
+   * {x} must match the pattern x times
+   * {x,} must match the pattern minimun of x times
+   * {x, y} must match pattern minimum x time, and maximun y times
+- In out example we can see {2,6} at the end of the expression. This means it is looking for a string of charactars that is minimum of 2 characters long and maximum of 6 characters. Examples of possible strings for \.([a-z\.]{2,6}) are: 
+   * .com
+   * .ca 
+   * .org
+
+- In contrast to greedy matches which want to make as many matches as possible, lazy matches want to take the shortest route possible. A regular quantifier is made lazy by adding a (?) to it. You can think of it as someone who is questioning what work they can forget about to clock out of work early without getting caught. 
 
 ### Boundaries
+- Boundries mark the beginning and end of the line. 
+- (^) marks the beginning
+- ($) marks the end 
 
 ### Back-references
 
@@ -84,3 +103,6 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - About the Author: I am a new front/back- end developer studyign at the University of Toronto.
 - GitHub Profile: https://github.com/Sagenthave 
 <!-- A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile) -->
+## References 
+- https://www.ibm.com/docs/en/netcoolomnibus/8.1?topic=library-minimal-non-greedy-quantifiers 
+- https://www.rexegg.com/regex-quantifiers.html 
