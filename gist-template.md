@@ -48,7 +48,10 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - This means these two sections can be repeated. For the sake of simplicity I will only multiply it once to generate an email with the encrypted expression. 
 
 ### OR Operator
-- 
+- The OR Opterator (|) takes into consideration that within the bracket expression, it is not necassary for all the requiraments to been met. 
+- For example: 123 can be written as 1|2|3
+- In a more complex example (kyx)@(123). Possible examples of what would match are: "kyx@123", "yx@23", "x:3". 
+- However, "123"kyx" would now be a match. 
 
 ### Character Classes
 
