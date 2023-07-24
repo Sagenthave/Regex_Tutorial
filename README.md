@@ -5,7 +5,7 @@
 - I WANT a tutorial explaining a specific regex
 - SO THAT I can understand the search pattern the regex defines
 
-![screenshot](/)
+![screenshot](/Screenshot%202023-07-24%20at%206.53.01%20PM.png)
 
 # Acceptance Criteria
 - GIVEN a regex tutorial
