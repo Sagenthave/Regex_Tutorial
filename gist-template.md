@@ -14,14 +14,15 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
-<!-- - [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing) -->
+<!-- - [Character Classes](#character-classes) -->
+<!-- - [Flags](#flags) -->
+<!-- - [Grouping and Capturing](#grouping-and-capturing) -->
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Email Examples](#email-examples)
+<!-- - [Look-ahead and Look-behind](#look-ahead-and-look-behind) -->
 
 ## Regex Components
 - Regex means it follows a literal pattern and to signify this the entire encryped message is wrapped inbetween slash characters (/). This signifies that the pattern does not change. For example is abc is written at the beginning, end, or middle of the encryped expression, it does not change what is stands for. 
@@ -96,8 +97,22 @@ The regex I will be describing is matching an encrypted email to a standard one.
 - ($) marks the end 
 
 ### Back-references
+- Back-referances refer back to the previous matched pattern expression. They are indicated with a (\1). Though this method is not used in our example, it can be understood as ([a-z.o.a-z\1])
+- Examples that can fill this and be repeated are
+   * mom
+   * bob
+   * dog
 
-### Look-ahead and Look-behind
+<!-- ### Look-ahead and Look-behind -->
+
+## Email Examples
+## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+- Now with all the information you have learned from the tutorial try to make up an email using the expression above. A few examples have been listed below
+
+- save_the_planet-123@gmail.com
+- rio_autumn@hotmail.ca
+- sintha1991@yahoo.com
+
 
 ## Author
 - About the Author: I am a new front/back- end developer studyign at the University of Toronto.
@@ -105,4 +120,5 @@ The regex I will be describing is matching an encrypted email to a standard one.
 <!-- A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile) -->
 ## References 
 - https://www.ibm.com/docs/en/netcoolomnibus/8.1?topic=library-minimal-non-greedy-quantifiers 
-- https://www.rexegg.com/regex-quantifiers.html 
+- https://www.rexegg.com/regex-quantifiers.html
+- https://www.gnu.org/software/sed/manual/html_node/Back_002dreferences-and-Subexpressions.html#:~:text=back%2Dreferences%20are%20regular%20expression,and%20is%20designated%20with%20parentheses.  
