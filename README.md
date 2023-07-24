@@ -20,4 +20,4 @@
 
 # Deployment: 
 GitHub: https://github.com/Sagenthave/Regex_Tutorial 
-Gist: __________ 
+GitHub Gist: https://gist.github.com/Sagenthave/71f152a21607b7b6f6ab48df27fcf4df 
